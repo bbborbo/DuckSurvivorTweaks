@@ -38,7 +38,7 @@ namespace DuckSurvivorTweaks
     [BepInPlugin(
         "com.Borbo.DuckSurvivorTweaks",
         "DuckSurvivorTweaks",
-        "2.6.1")]
+        "2.7.0")]
 
     [R2APISubmoduleDependency(nameof(LanguageAPI), nameof(LoadoutAPI), 
         nameof(RecalculateStatsAPI), nameof(PrefabAPI))]
