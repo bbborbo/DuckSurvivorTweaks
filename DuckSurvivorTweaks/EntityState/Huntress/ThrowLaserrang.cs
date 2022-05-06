@@ -13,8 +13,8 @@ namespace DuckSurvivorTweaks.EntityState.Huntress
 {
     class ThrowLaserrang : BaseState
 	{
-		public static float baseDuration = 1.2f;
-		public static float damageCoefficient = 6f;
+		public static float baseDuration = 1.35f;
+		public static float damageCoefficient = 5f;
 		public static float force = 150f;
 		private float duration;
 

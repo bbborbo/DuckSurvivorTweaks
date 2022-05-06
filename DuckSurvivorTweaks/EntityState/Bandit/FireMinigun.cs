@@ -12,9 +12,9 @@ namespace DuckSurvivorTweaks.EntityState.Bandit
     {
         public static string muzzle = "MuzzleShotgun";
         public static string soundString = "Play_bandit2_m1_rifle";
-        public static GameObject muzzleFlash = Resources.Load<GameObject>("prefabs/effects/muzzleflashes/MuzzleflashBandit2");
-        public static GameObject tracerEffect = Resources.Load<GameObject>("prefabs/effects/tracers/TracerBandit2Rifle");
-        public static GameObject hitEffect = Resources.Load<GameObject>("prefabs/effects/impacteffects/HitsparkBandit");
+        public static GameObject muzzleFlash = LegacyResourcesAPI.Load<GameObject > ("prefabs/effects/muzzleflashes/MuzzleflashBandit2");
+        public static GameObject tracerEffect = LegacyResourcesAPI.Load<GameObject>("prefabs/effects/tracers/TracerBandit2Rifle");
+        public static GameObject hitEffect = LegacyResourcesAPI.Load<GameObject>("prefabs/effects/impacteffects/HitsparkBandit");
         public static float damageCoeff = 1.6f;
 
         public override void OnEnter()

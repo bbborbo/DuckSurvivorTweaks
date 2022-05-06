@@ -12,7 +12,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
 {
     class RexTweaks : SurvivorTweakModule
     {
-        GameObject syringeB = Resources.Load<GameObject>("prefabs/projectiles/SyringeProjectileHealing");
+        GameObject syringeB = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/SyringeProjectileHealing");
         float syringeDamageCoefficient = 0.8f; // 0.8f
         float syringeHealFraction = 0.3f; // 0.6f
 

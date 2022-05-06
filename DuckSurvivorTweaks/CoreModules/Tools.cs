@@ -30,7 +30,7 @@ namespace DuckSurvivorTweaks
         /// <returns>The generated prefix</returns>
         public static string modPrefix = String.Format("@{0}+{1}", "ArtificerExtended", "artiskillicons");
 
-        public static String GetModPrefix(this BepInEx.BaseUnityPlugin plugin, String bundleName)
+        public static String GetModPrefix(this BaseUnityPlugin plugin, String bundleName)
         {
             return String.Format("@{0}+{1}", plugin.Info.Metadata.Name, bundleName);
         }

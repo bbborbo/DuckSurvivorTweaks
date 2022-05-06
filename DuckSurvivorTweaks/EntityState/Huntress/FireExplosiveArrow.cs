@@ -13,8 +13,8 @@ namespace DuckSurvivorTweaks.EntityState.Huntress
 {
     class FireExplosiveArrow : BaseThrowBombState
     {
-		public static GameObject muzzleFlash = Resources.Load<GameObject>("prefabs/effects/muzzleflashes/MuzzleflashHuntress");
-		public static GameObject muzzleFlashCrit = Resources.Load<GameObject>("prefabs/effects/muzzleflashes/MuzzleflashHuntressFlurry");
+		public static GameObject muzzleFlash = LegacyResourcesAPI.Load<GameObject>("prefabs/effects/muzzleflashes/MuzzleflashHuntress");
+		public static GameObject muzzleFlashCrit = LegacyResourcesAPI.Load<GameObject>("prefabs/effects/muzzleflashes/MuzzleflashHuntressFlurry");
 
 		public bool isCrit;
 		public static float maxDamage = 3.2f;

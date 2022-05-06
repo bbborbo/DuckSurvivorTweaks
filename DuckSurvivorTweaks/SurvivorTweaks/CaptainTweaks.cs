@@ -26,33 +26,33 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
         public static float shotgunPelletDamageCoeff = 1f; //1.2
         public static float shotgunPelletProcCoeff = 0.5f; //0.75
 
-        public static GameObject tazerPrefab = Resources.Load<GameObject>("prefabs/projectiles/CaptainAirstrikeAltProjectile");
+        public static GameObject tazerPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/CaptainTazer");
         public static float tazerAoeRadius = 6; //2
         public static float tazerDamage = 2f; //1
         public static float tazerDamageBonus = 2f; 
         public static float tazerCooldown = 5; //6
 
-        public static GameObject diabloPrefab = Resources.Load<GameObject>("prefabs/effects/ExplosionDroneDeath");
+        public static GameObject diabloPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/effects/ExplosionDroneDeath");
         float diabloMaxDuration = 20;
 
 
         public static bool refreshSupplyDrops = true;
-        public static GameObject beaconExplosion = Resources.Load<GameObject>("prefabs/effects/ExplosionDroneDeath");
+        public static GameObject beaconExplosion = LegacyResourcesAPI.Load<GameObject>("prefabs/effects/ExplosionDroneDeath");
 
-        public static GameObject healZone = Resources.Load<GameObject>("prefabs/networkedobjects/captainsupplydrops/CaptainHealingWard");
+        public static GameObject healZone = LegacyResourcesAPI.Load<GameObject>("prefabs/networkedobjects/captainsupplydrops/CaptainHealingWard");
         public static float healRadius = 12; //9
 
-        public static GameObject shockBeacon = Resources.Load<GameObject>("prefabs/networkedobjects/captainsupplydrops/CaptainSupplyDrop, Shocking");
+        public static GameObject shockBeacon = LegacyResourcesAPI.Load<GameObject>("prefabs/networkedobjects/captainsupplydrops/CaptainSupplyDrop, Shocking");
         public static float shockRadius = 12;
         public static float shockDamageCoefficient = 1f; //0
         public static float shockRate = 2f; //3
         public static float shockForce = 500f; //0
 
-        public static GameObject hackBeacon = Resources.Load<GameObject>("prefabs/networkedobjects/captainsupplydrops/CaptainSupplyDrop, Hacking");
+        public static GameObject hackBeacon = LegacyResourcesAPI.Load<GameObject>("prefabs/networkedobjects/captainsupplydrops/CaptainSupplyDrop, Hacking");
         public static float hackRadius = 9;
         public static float hackBaseDuration = 30; //15
 
-        public static GameObject supplyBeacon = Resources.Load<GameObject>("prefabs/networkedobjects/captainsupplydrops/CaptainSupplyDrop, EquipmentRestock");
+        public static GameObject supplyBeacon = LegacyResourcesAPI.Load<GameObject>("prefabs/networkedobjects/captainsupplydrops/CaptainSupplyDrop, EquipmentRestock");
         public static GameObject supplyRadiusIndicator = healZone;
         public static float supplyRadius = 9;
 

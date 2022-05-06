@@ -61,7 +61,7 @@ namespace DuckSurvivorTweaks.Skills
 
         private void CreateProjectile()
         {
-            nailBombProjectile = Resources.Load<GameObject>("prefabs/projectiles/BanditGrenadeProjectile").InstantiateClone("BanditNailBomb", true);
+            nailBombProjectile = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/BanditGrenadeProjectile").InstantiateClone("BanditNailBomb", true);
             ProjectileFuse fuse = nailBombProjectile.AddComponent<ProjectileFuse>();
             fuse.fuse = 0.3f;
 

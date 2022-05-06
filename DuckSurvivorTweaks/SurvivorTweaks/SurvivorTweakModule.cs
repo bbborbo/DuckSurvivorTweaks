@@ -36,7 +36,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
         }
         public static GameObject GetBodyObject(string name)
         {
-            return Resources.Load<GameObject>($"prefabs/characterbodies/{name}");
+            return LegacyResourcesAPI.Load<GameObject>($"prefabs/characterbodies/{name}");
         }
         public void GetSkillsFromBodyObject(GameObject bodyObject)
         {

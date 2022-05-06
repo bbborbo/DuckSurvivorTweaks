@@ -35,7 +35,7 @@ namespace DuckSurvivorTweaks.EntityState
 
         private GameObject chargeEffectInstance;
 
-        public static GameObject aoeEffect = Resources.Load<GameObject>("prefabs/effects/omnieffect/OmniImpactVFXLightningMage");
+        public static GameObject aoeEffect = LegacyResourcesAPI.Load<GameObject>("prefabs/effects/omnieffect/OmniImpactVFXLightningMage");
         public static GameObject muzzleflashEffect = new FireCaptainShotgun().muzzleFlashPrefab;// muzzleflashEffect;
         private GameObject chargeupVfxGameObject = new ChargeCaptainShotgun().chargeupVfxGameObject;
         private uint enterSoundID;

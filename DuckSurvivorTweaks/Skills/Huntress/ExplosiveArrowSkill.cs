@@ -75,10 +75,10 @@ namespace DuckSurvivorTweaks.Skills
 
         private void CreateProjectile()
         {
-            //regularArrowPrefab = Resources.Load<GameObject>("prefabs/projectiles/Arrow");
+            //regularArrowPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/Arrow");
             //critArrowPrefab = regularArrowPrefab;
-            regularArrowPrefab = Resources.Load<GameObject>("prefabs/projectiles/Arrow").InstantiateClone("BorboHuntressExplosiveArrowNormal", true);
-            //GameObject arrowGhost = Resources.Load<GameObject>("prefabs/projectileghosts/ArrowGhost");
+            regularArrowPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/Arrow").InstantiateClone("BorboHuntressExplosiveArrowNormal", true);
+            //GameObject arrowGhost = LegacyResourcesAPI.Load<GameObject>("prefabs/projectileghosts/ArrowGhost");
 
             #region arrow 1
             ProjectileController pc = regularArrowPrefab.GetComponent<ProjectileController>();
@@ -97,7 +97,7 @@ namespace DuckSurvivorTweaks.Skills
 
 
             critArrowPrefab = regularArrowPrefab.InstantiateClone("BorboHuntressExplosiveArrowCrit", true);
-            critBombletsPrefab = Resources.Load<GameObject>("prefabs/projectiles/CryoCanisterBombletsProjectile").InstantiateClone("BorboHuntressExplosiveArrowBomblets", true);
+            critBombletsPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/CryoCanisterBombletsProjectile").InstantiateClone("BorboHuntressExplosiveArrowBomblets", true);
 
             #region arrow 2
             ProjectileSingleTargetImpact psti = critArrowPrefab.GetComponent<ProjectileSingleTargetImpact>();
@@ -110,7 +110,7 @@ namespace DuckSurvivorTweaks.Skills
             pie1.destroyOnEnemy = true;
             pie1.destroyOnWorld = true;
             pie1.blastRadius = 7f;
-            pie1.impactEffect = Resources.Load<GameObject>("prefabs/effects/impacteffects/IgniteDirectionalExplosionVFX");
+            pie1.impactEffect = LegacyResourcesAPI.Load<GameObject>("prefabs/effects/impacteffects/IgniteDirectionalExplosionVFX");
             pie1.childrenCount = critBombletCount;
             pie1.childrenProjectilePrefab = critBombletsPrefab;
             pie1.childrenDamageCoefficient = 1 / FireExplosiveArrow.maxDamage;

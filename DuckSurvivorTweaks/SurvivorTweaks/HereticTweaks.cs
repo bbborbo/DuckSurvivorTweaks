@@ -13,7 +13,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
 {
     class HereticTweaks : SurvivorTweakModule
     {
-        public static GameObject secondaryProjectile = Resources.Load<GameObject>("prefabs/projectiles/LunarSecondaryProjectile");
+        public static GameObject secondaryProjectile = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/LunarSecondaryProjectile");
         public static float secondaryMaxCharge = 3; //2f
         public static float secondaryBladesDamage = 1f;
         public static float secondaryBladesFrequency = 6f;
@@ -36,11 +36,11 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
         public override void Init()
         {
             GetBodyObject();
-            //nevermoreSkill = Resources.Load<SkillDef>("skilldefs/lunarreplacements/LunarDetonatorSpecialReplacement");// SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("HereticDefaultSkill"));
-            //lunarPrimarySkill = Resources.Load<SkillDef>("skilldefs/lunarreplacements/LunarPrimaryReplacement");//SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("LunarPrimaryReplacement"));
-            //lunarSecondarySkill = Resources.Load<SkillDef>("skilldefs/lunarreplacements/LunarSecondaryReplacement");//SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("LunarSecondaryReplacement"));
-            //lunarUtilitySkill = Resources.Load<SkillDef>("skilldefs/lunarreplacements/LunarUtilityReplacement");//SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("LunarUtilityReplacement"));
-            //lunarSpecialSkill = Resources.Load<SkillDef>("skilldefs/lunarreplacements/LunarDetonatorSpecialReplacement");//SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("LunarDetonatorSpecialReplacement"));
+            //nevermoreSkill = LegacyResourcesAPI.Load<SkillDef>("skilldefs/lunarreplacements/LunarDetonatorSpecialReplacement");// SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("HereticDefaultSkill"));
+            //lunarPrimarySkill = LegacyResourcesAPI.Load<SkillDef>("skilldefs/lunarreplacements/LunarPrimaryReplacement");//SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("LunarPrimaryReplacement"));
+            //lunarSecondarySkill = LegacyResourcesAPI.Load<SkillDef>("skilldefs/lunarreplacements/LunarSecondaryReplacement");//SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("LunarSecondaryReplacement"));
+            //lunarUtilitySkill = LegacyResourcesAPI.Load<SkillDef>("skilldefs/lunarreplacements/LunarUtilityReplacement");//SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("LunarUtilityReplacement"));
+            //lunarSpecialSkill = LegacyResourcesAPI.Load<SkillDef>("skilldefs/lunarreplacements/LunarDetonatorSpecialReplacement");//SkillCatalog.GetSkillDef(SkillCatalog.FindSkillIndexByName("LunarDetonatorSpecialReplacement"));
 
             #region body
             CharacterBody vanillaHereticBody = bodyObject.GetComponent<CharacterBody>();

@@ -1,11 +1,11 @@
 ﻿using DuckSurvivorTweaks.SurvivorTweaks;
-using JetBrains.Annotations;
 using RoR2;
 using RoR2.Skills;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.Bindings;
 
 namespace DuckSurvivorTweaks.CoreModules
 {
@@ -16,8 +16,8 @@ namespace DuckSurvivorTweaks.CoreModules
             return;
             On.RoR2.Skills.SkillDef.OnFixedUpdate += SkillDefFixedUpdate;
 
-            SkillDef acridPoisonSkill = Resources.Load<SkillDef>("skilldefs/crocobody/CrocoPassivePoison");
-            SkillDef acridBlightSkill = Resources.Load<SkillDef>("skilldefs/crocobody/CrocoPassiveBlight");
+            SkillDef acridPoisonSkill = LegacyResourcesAPI.Load<SkillDef>("skilldefs/crocobody/CrocoPassivePoison");
+            SkillDef acridBlightSkill = LegacyResourcesAPI.Load<SkillDef>("skilldefs/crocobody/CrocoPassiveBlight");
             acridPoisonSkill.cancelSprintingOnActivation = false;
             acridBlightSkill.cancelSprintingOnActivation = false;
         }

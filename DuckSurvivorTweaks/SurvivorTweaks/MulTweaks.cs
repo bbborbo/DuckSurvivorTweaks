@@ -17,7 +17,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
     {
         float nailSpreadCoefficient = 1.2f;
 
-        GameObject scrapProjectile = Resources.Load<GameObject>("prefabs/projectiles/ToolbotGrenadeLauncherProjectile");
+        GameObject scrapProjectile = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/ToolbotGrenadeLauncherProjectile");
         public static bool useScrapGravity = true;
         public static float scrapSpeed = 150; //100
         public static float scrapCooldown = 3; //1.5f

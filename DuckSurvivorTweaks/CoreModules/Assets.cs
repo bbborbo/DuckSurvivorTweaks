@@ -61,7 +61,7 @@ namespace DuckSurvivorTweaks.CoreModules
                 banditShredDebuff.canStack = true;
                 banditShredDebuff.isDebuff = true;
                 banditShredDebuff.name = "BanditShredDebuff";
-                banditShredDebuff.iconSprite = Resources.Load<Sprite>("textures/bufficons/texBuffCrippleIcon");
+                banditShredDebuff.iconSprite = LegacyResourcesAPI.Load<Sprite>("textures/bufficons/texBuffCrippleIcon");
             }
             buffDefs.Add(banditShredDebuff);
         }
@@ -90,7 +90,7 @@ namespace DuckSurvivorTweaks.CoreModules
                 aspdPenaltyDebuff.canStack = false;
                 aspdPenaltyDebuff.isDebuff = false;
                 aspdPenaltyDebuff.name = "AttackSpeedPenalty";
-                aspdPenaltyDebuff.iconSprite = Resources.Load<Sprite>("textures/bufficons/texBuffSlow50Icon");
+                aspdPenaltyDebuff.iconSprite = LegacyResourcesAPI.Load<Sprite>("textures/bufficons/texBuffSlow50Icon");
             }
             buffDefs.Add(aspdPenaltyDebuff);
         }
@@ -118,7 +118,7 @@ namespace DuckSurvivorTweaks.CoreModules
                 captainCdrBuff.canStack = false;
                 captainCdrBuff.isDebuff = false;
                 captainCdrBuff.name = "CaptainBeaconCdr";
-                captainCdrBuff.iconSprite = Resources.Load<Sprite>("textures/bufficons/texMovespeedBuffIcon");
+                captainCdrBuff.iconSprite = LegacyResourcesAPI.Load<Sprite>("textures/bufficons/texMovespeedBuffIcon");
             }
             buffDefs.Add(captainCdrBuff);
         }
@@ -137,7 +137,7 @@ namespace DuckSurvivorTweaks.CoreModules
                 desperadoExecutionDebuff.canStack = false;
                 desperadoExecutionDebuff.isDebuff = true;
                 desperadoExecutionDebuff.name = "DesperadoExecutionDebuff";
-                desperadoExecutionDebuff.iconSprite = Resources.Load<Sprite>("textures/bufficons/texBuffCrippleIcon");
+                desperadoExecutionDebuff.iconSprite = LegacyResourcesAPI.Load<Sprite>("textures/bufficons/texBuffCrippleIcon");
             }
             buffDefs.Add(desperadoExecutionDebuff);
             lightsoutExecutionDebuff = ScriptableObject.CreateInstance<BuffDef>();
@@ -146,7 +146,7 @@ namespace DuckSurvivorTweaks.CoreModules
                 lightsoutExecutionDebuff.canStack = false;
                 lightsoutExecutionDebuff.isDebuff = true;
                 lightsoutExecutionDebuff.name = "LightsOutExecutionDebuff";
-                lightsoutExecutionDebuff.iconSprite = Resources.Load<Sprite>("textures/bufficons/texBuffCrippleIcon");
+                lightsoutExecutionDebuff.iconSprite = LegacyResourcesAPI.Load<Sprite>("textures/bufficons/texBuffCrippleIcon");
             }
             buffDefs.Add(lightsoutExecutionDebuff);
         }

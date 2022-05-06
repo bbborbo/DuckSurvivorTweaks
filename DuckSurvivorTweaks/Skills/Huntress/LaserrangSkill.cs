@@ -15,7 +15,7 @@ namespace DuckSurvivorTweaks.Skills
     class LaserrangSkill : SkillBase
     {
         public static GameObject boomerangPrefab;
-        static float maxFlyOutTime = 0.4f; //0.6f
+        static float maxFlyOutTime = 0.3f; //0.6f
         static float boomerangScale = 0.3f; //1.0f
 
         public override string SkillName => "Laser-Rang";
@@ -39,7 +39,7 @@ namespace DuckSurvivorTweaks.Skills
 
         public override SimpleSkillData SkillData => new SimpleSkillData
             (
-                baseRechargeInterval: 5,
+                baseRechargeInterval: 7,
                 interruptPriority: EntityStates.InterruptPriority.Skill
             );
 
@@ -59,8 +59,8 @@ namespace DuckSurvivorTweaks.Skills
 
         private void CreateProjectile()
         {
-            boomerangPrefab = Resources.Load<GameObject>("prefabs/projectiles/Sawmerang").InstantiateClone("HuntressLaserrang", true);
-            GameObject ghost = Resources.Load<GameObject>("prefabs/projectileghosts/GlaiveGhost").InstantiateClone("HuntressLaserrangGhost", false);
+            boomerangPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/Sawmerang").InstantiateClone("HuntressLaserrang", true);
+            GameObject ghost = LegacyResourcesAPI.Load<GameObject>("prefabs/projectileghosts/GlaiveGhost").InstantiateClone("HuntressLaserrangGhost", false);
             boomerangPrefab.transform.localScale = Vector3.one * boomerangScale;
 
             BoomerangProjectile bp = boomerangPrefab.GetComponent<BoomerangProjectile>();
@@ -75,15 +75,15 @@ namespace DuckSurvivorTweaks.Skills
             pd.damageType |= DamageType.BonusToLowHealth;
 
             ProjectileDotZone pdz = boomerangPrefab.GetComponent<ProjectileDotZone>();
-            pdz.overlapProcCoefficient = 0.5f;
+            /*pdz.overlapProcCoefficient = 0.8f;
             pdz.damageCoefficient = 1f;
             pdz.resetFrequency = 1 / (maxFlyOutTime + bp.transitionDuration);
-            pdz.fireFrequency = 20f;
+            pdz.fireFrequency = 20f;*/
             UnityEngine.Object.Destroy(pdz);
 
             ProjectileOverlapAttack poa = boomerangPrefab.GetComponent<ProjectileOverlapAttack>();
             poa.damageCoefficient = 1f;
-            poa.overlapProcCoefficient = 1.0f;
+            poa.overlapProcCoefficient = 0.8f;
 
             Assets.projectilePrefabs.Add(boomerangPrefab);
         }

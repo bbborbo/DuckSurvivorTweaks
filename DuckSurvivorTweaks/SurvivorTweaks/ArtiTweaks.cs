@@ -39,7 +39,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
             {
                 jetpackSpeedBoost.buffColor = new Color(220, 100, 100);
                 jetpackSpeedBoost.canStack = false;
-                jetpackSpeedBoost.iconSprite = Resources.Load<Sprite>("textures/bufficons/texMovespeedBuffIcon");
+                jetpackSpeedBoost.iconSprite = LegacyResourcesAPI.Load<Sprite>("textures/bufficons/texMovespeedBuffIcon");
                 jetpackSpeedBoost.isDebuff = false;
                 jetpackSpeedBoost.name = "MageJetpackSpeedBoost";
             }
@@ -88,7 +88,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
             SkillDef snapfreeze = utility.variants[0].skillDef;
             snapfreeze.baseRechargeInterval = 8f;
 
-            GameObject iceWallPillarPrefab = Resources.Load<GameObject>("prefabs/projectiles/MageIcewallPillarProjectile");
+            GameObject iceWallPillarPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/MageIcewallPillarProjectile");
             Collider collider = iceWallPillarPrefab.GetComponentInChildren<Collider>();
             if (collider)
             {
@@ -98,7 +98,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
                 pie.blastRadius = 4f;
             }
 
-            GameObject iceWallWalkerPrefab = Resources.Load<GameObject>("prefabs/projectiles/MageIcewallWalkerProjectile");
+            GameObject iceWallWalkerPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/MageIcewallWalkerProjectile");
             ProjectileMageFirewallWalkerController pmfwc = iceWallWalkerPrefab.GetComponent<ProjectileMageFirewallWalkerController>();
             if (pmfwc)
             {

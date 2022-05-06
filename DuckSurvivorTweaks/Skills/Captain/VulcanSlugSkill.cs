@@ -55,7 +55,7 @@ namespace DuckSurvivorTweaks.Skills
 
         private void CreateProjectile()
         {
-            vulcanSlugPrefab = Resources.Load<GameObject>("prefabs/projectiles/ToolbotGrenadeLauncherProjectile").InstantiateClone("CaptainVulcanSlug", true);
+            vulcanSlugPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/ToolbotGrenadeLauncherProjectile").InstantiateClone("CaptainVulcanSlug", true);
             vulcanSlugPrefab.transform.localScale = Vector3.one * 0.3f;
 
             Assets.projectilePrefabs.Add(vulcanSlugPrefab);

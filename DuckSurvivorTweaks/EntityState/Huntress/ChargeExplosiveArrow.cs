@@ -12,7 +12,7 @@ namespace DuckSurvivorTweaks.EntityState.Huntress
 {
     class ChargeExplosiveArrow : BaseChargeBombState
     {
-        public static GameObject muzzleFlashPerfectTiming = Resources.Load<GameObject>("prefabs/effects/muzzleflashes/Muzzleflash1");
+        public static GameObject muzzleFlashPerfectTiming = LegacyResourcesAPI.Load<GameObject>("prefabs/effects/muzzleflashes/Muzzleflash1");
         public static float baseWindUpDuration = 0.9f;
         public static float baseWindDownDuration = 0.1f;
         public static float sweetSpotDuration = 0.2f; // not affected by attack speed

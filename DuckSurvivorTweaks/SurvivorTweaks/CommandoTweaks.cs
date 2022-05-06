@@ -1,5 +1,6 @@
 ﻿using EntityStates.Commando.CommandoWeapon;
 using R2API;
+using RoR2;
 using RoR2.Skills;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
 {
     class CommandoTweaks : SurvivorTweakModule
     {
-        public static GameObject phaseRoundPrefab = Resources.Load<GameObject>("prefabs/projectiles/FMJ");
+        public static GameObject phaseRoundPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/projectiles/FMJ");
         public static float phaseRoundDamageCoeff = 5f; //3
         public static float phaseRoundCooldown = 5f; //3
         public static float phaseRoundDuration = 1f; //0.5

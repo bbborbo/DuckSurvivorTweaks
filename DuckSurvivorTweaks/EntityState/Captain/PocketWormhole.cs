@@ -105,7 +105,7 @@ namespace DuckSurvivorTweaks.EntityState.Captain
 					pointBPosition = position + pointBDirection * raycastHit2.distance;
 				}
 
-				GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/NetworkedObjects/Zipline"));
+				GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(LegacyResourcesAPI.Load<GameObject>("Prefabs/NetworkedObjects/Zipline"));
 				ZiplineController component2 = gameObject.GetComponent<ZiplineController>();
 				component2.SetPointAPosition(position + pointBDirection * num);
 				component2.SetPointBPosition(pointBPosition);

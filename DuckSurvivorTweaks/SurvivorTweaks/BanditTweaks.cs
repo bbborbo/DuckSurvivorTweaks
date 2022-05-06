@@ -292,7 +292,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
                 {
                     self.body.RemoveBuff(Assets.lightsoutExecutionDebuff.buffIndex);
 
-                    EffectManager.SpawnEffect(Resources.Load<GameObject>("Prefabs/Effects/ImpactEffects/Bandit2ResetEffect"), new EffectData
+                    EffectManager.SpawnEffect(LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/Bandit2ResetEffect"), new EffectData
                     {
                         origin = damageInfo.position
                     }, true);
@@ -306,7 +306,7 @@ namespace DuckSurvivorTweaks.SurvivorTweaks
                 {
                     self.body.RemoveBuff(Assets.desperadoExecutionDebuff.buffIndex);
 
-                    EffectManager.SpawnEffect(Resources.Load<GameObject>("Prefabs/Effects/ImpactEffects/Bandit2KillEffect"), new EffectData
+                    EffectManager.SpawnEffect(LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/Bandit2KillEffect"), new EffectData
                     {
                         origin = damageInfo.position
                     }, true);

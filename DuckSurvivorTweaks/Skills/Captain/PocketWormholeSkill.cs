@@ -42,8 +42,14 @@ namespace DuckSurvivorTweaks.Skills
 
         public override void Hooks()
         {
+            On.RoR2.EquipmentCatalog.SetEquipmentDefs += Gah;
+        }
+
+        private void Gah(On.RoR2.EquipmentCatalog.orig_SetEquipmentDefs orig, EquipmentDef[] newEquipmentDefs)
+        {
             RoR2Content.Equipment.Gateway.canDrop = false;
             RoR2Content.Equipment.Gateway.enigmaCompatible = false;
+            orig(newEquipmentDefs);
         }
 
         public override void Init(ConfigFile config)

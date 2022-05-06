@@ -80,7 +80,7 @@ namespace DuckSurvivorTweaks.Skills
             }
             else
             {
-                GameObject body = Resources.Load<GameObject>("prefabs/characterbodies/" + CharacterName);
+                GameObject body = LegacyResourcesAPI.Load<GameObject>("prefabs/characterbodies/" + CharacterName);
                 skillLocator = body?.GetComponent<SkillLocator>();
 
                 if (skillLocator)
